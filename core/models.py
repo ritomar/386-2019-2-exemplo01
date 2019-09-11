@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
+class Tarefa(models.Model):
+    descricao = models.CharField(max_length=100)
+    feito = models.BooleanField()
+
+    def __str__(self):
+        return self.descricao
